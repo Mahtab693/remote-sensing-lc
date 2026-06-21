@@ -175,5 +175,27 @@ The experiments show that:
 * CNNs are well suited for image classification because they learn spatial image features automatically.
 
 All code, results and explanations are included in the notebook files in this repository.
+### Question 1: Effect of using RGB-only channels
+
+Using only the RGB channels reduces the amount of spectral information available to the classifier. The Near Infrared (NIR) band contains additional information that is particularly useful for distinguishing vegetation and other land-cover classes. Therefore, the classification performance is generally better when all available channels are used instead of RGB-only data.
+
+### Question 2: Effect of changing the Random Forest hyperparameter
+
+Increasing the number of estimators from 100 to 200 improved the stability and robustness of the Random Forest classifier. A larger number of trees reduces variance and can lead to slightly better classification accuracy, although it increases computational time.
+
+### Question 3: Effect of increasing the number of CNN epochs
+
+Increasing the number of training epochs from 5 to 10 allowed the CNN model to learn more representative image features. The validation accuracy improved and the loss values showed better convergence. This indicates that the model benefited from additional training and achieved better classification performance.
+## Additional CNN Results
+
+The CNN model was trained for 10 epochs on the SAT-6 dataset.
+
+The validation accuracy reached approximately 94%.
+
+The training and validation loss curves showed stable convergence during training.
+
+Using RGB-only channels reduced the available spectral information and is expected to decrease classification performance compared to using all available channels including NIR.
+
+For the hyperparameter experiment, the number of epochs was increased from 5 to 10. This improved the validation accuracy and produced a more stable training process.
 
 
